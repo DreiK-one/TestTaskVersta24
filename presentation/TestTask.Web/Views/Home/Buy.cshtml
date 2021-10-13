@@ -1,0 +1,55 @@
+﻿@model TestTask.Order
+@{
+    ViewData["Title"] = "Making an order";
+}
+<h3>Making an order</h3>
+<form method="post" class="form-horizontal" role="form">
+    <p>To place an order, fill in the following fields:</p>
+    <div class="form-group">
+        <label for="User" class="col-md-2 control-label">Sender's city:</label>
+        <div class="col-md-4">
+            <input type="text" name="SenderCity" class="form-control" />
+            <span asp-validation-for="SenderCity" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="User" class="col-md-2 control-label">Sender's address:</label>
+        <div class="col-md-4">
+            <input type="text" name="SenderAddress" class="form-control" />
+            <span asp-validation-for="SenderAddress" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="User" class="col-md-2 control-label">Recipient's city:</label>
+        <div class="col-md-4">
+            <input type="text" name="AddresseeCity" class="form-control" />
+            <span asp-validation-for="AddresseeCity" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="User" class="col-md-2 control-label">Recipient's address:</label>
+        <div class="col-md-4">
+            <input type="text" name="AddresseeAddress" class="form-control" />
+            <span asp-validation-for="AddresseeAddress" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="User" class="col-md-2 control-label">Cargo weight:</label>
+        <div class="col-md-4">
+            <input type="text" name="Weight" class="form-control" />
+            <span asp-validation-for="Weight" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="User" class="col-md-2 control-label">Date of cargo pickup:</label>
+        <div class="col-md-4">
+            <input type="text" name="Date" class="form-control" />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-success" value="Place an order" />
+        </div>
+    </div>
+</form>
